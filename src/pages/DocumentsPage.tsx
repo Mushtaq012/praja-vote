@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Download, Eye } from 'lucide-react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 interface Document {
   id: string;
   title: string;
@@ -116,7 +118,6 @@ const documents: Document[] = [
     type: 'PDF',
     fileName: 'Proposal Report - IT 21361654.pdf'
   }
-
 ];
 
 const DocumentsPage: React.FC = () => {
@@ -160,44 +161,47 @@ const DocumentsPage: React.FC = () => {
           animate="visible"
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {documents.map(doc => (
-            <motion.div
-              key={doc.id}
-              variants={itemVariants}
-              className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <FileText className="text-blue-600" size={24} />
-                  <span className="text-xs font-medium bg-blue-100 text-blue-600 py-1 px-2 rounded">
-                    {doc.type}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{doc.title}</h3>
-                <p className="text-gray-600 mb-4">{doc.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">{doc.date}</span>
-                  <div className="flex space-x-2">
-                    <a
-                      href={`/docs/reports/${doc.fileName}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors duration-300"
-                    >
-                      <Eye size={18} />
-                    </a>
-                    <a
-                      href={`/docs/reports/${doc.fileName}`}
-                      download
-                      className="p-2 rounded-full bg-orange-100 text-orange-600 hover:bg-orange-200 transition-colors duration-300"
-                    >
-                      <Download size={18} />
-                    </a>
+          {documents.map(doc => {
+            const fileUrl = `${BASE_URL}docs/reports/${doc.fileName}`;
+            return (
+              <motion.div
+                key={doc.id}
+                variants={itemVariants}
+                className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-4">
+                    <FileText className="text-blue-600" size={24} />
+                    <span className="text-xs font-medium bg-blue-100 text-blue-600 py-1 px-2 rounded">
+                      {doc.type}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{doc.title}</h3>
+                  <p className="text-gray-600 mb-4">{doc.description}</p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-500">{doc.date}</span>
+                    <div className="flex space-x-2">
+                      <a
+                        href={fileUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors duration-300"
+                      >
+                        <Eye size={18} />
+                      </a>
+                      <a
+                        href={fileUrl}
+                        download
+                        className="p-2 rounded-full bg-orange-100 text-orange-600 hover:bg-orange-200 transition-colors duration-300"
+                      >
+                        <Download size={18} />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </div>

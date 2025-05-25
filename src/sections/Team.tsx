@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import { Github, Linkedin, Mail } from 'lucide-react';
+const BASE_URL = import.meta.env.BASE_URL;
 
 interface TeamMember {
   id: string;
@@ -22,10 +23,10 @@ const teamMembers: TeamMember[] = [
     name: 'Mr. Hussain Rizmy',
     role: 'Leader, ZKP integration and Secuirty Tester',
     bio: 'A final-year Cyber Security undergraduate at SLIIT, specializing in Zero-Knowledge Proofs and cryptographic protocols. He contributed to the Praja Vote project by designing a privacy-preserving ZKP-based voting system.',
-    imageUrl: '/images/hussain.jpg',
+    imageUrl: `${BASE_URL}images/hussain.jpg`, // 
     socialLinks: {
-    linkedin: 'https://www.linkedin.com/in/seyyed-rizmy/',
-    email: 'seyyedrizmy@gmail.com'
+      linkedin: 'https://www.linkedin.com/in/seyyed-rizmy/',
+      email: 'seyyedrizmy@gmail.com'
     }
   },
   {
