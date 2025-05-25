@@ -2,12 +2,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/praja-vote/', // Correct base for GitHub Pages
+  base: '/praja-vote/', // Must match GitHub repo name
   plugins: [react()],
-  server: {
-    port: 3005,
+  build: {
+    sourcemap: true,
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  }
 });
