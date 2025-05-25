@@ -31,36 +31,33 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 'member-2',
-    name: 'Michael Chen',
+    name: 'Perera U.L.S.A',
     role: 'Cryptography Researcher',
-    bio: 'Ph.D. candidate focusing on zero-knowledge proofs and their applications in privacy-preserving systems.',
-    imageUrl: 'https://images.pexels.com/photos/5212339/pexels-photo-5212339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    bio: 'Final-year undergraduate student at the Sri Lanka Institute of Information Technology, specializing in Information Security Auditing. Contributed to the Prajā Vote project by implementing homomorphic encryption within the secure electronic voting system.',
+    imageUrl: `${BASE_URL}images/shevon.jpg`,
     socialLinks: {
-      github: '#',
       linkedin: '#',
-      email: 'mailto:researcher2@example.com'
+      email: 'Shevonperera@gmail.com'
     }
   },
   {
     id: 'member-3',
-    name: 'Sarah Johnson',
-    role: 'Systems Architect',
-    bio: 'Expert in distributed systems design with a focus on security and scalability in mission-critical applications.',
-    imageUrl: 'https://images.pexels.com/photos/5212692/pexels-photo-5212692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    name: 'Rafeek A.M',
+    role: 'Taint Analysis Engineer, Real-Time Input Validation & CFG Visualization',
+    bio: 'A final-year Cyber Security undergraduate at SLIIT, specializing in taint analysis, secure input validation, and control flow graph (CFG) modeling. Contributed to the Praja Vote project by developing a Flask-based taint tracking system with real-time monitoring that detects and logs malicious inputs instantly. Integrated visual CFG representations to enhance transparency in data flow and decision-making.',
+    imageUrl: `${BASE_URL}images/ammar.jpg`,
     socialLinks: {
-      github: '#',
       linkedin: '#',
-      email: 'mailto:researcher3@example.com'
+      email: 'AmmarMuham@gmail.com'
     }
   },
   {
     id: 'member-4',
-    name: 'David Nkosi',
-    role: 'UX Researcher',
-    bio: 'Specializes in human-computer interaction and designing usable security interfaces for diverse user groups.',
-    imageUrl: 'https://images.pexels.com/photos/5212361/pexels-photo-5212361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    name: 'Mushtaq M.B.M ',
+    role: 'MPC Vote Talleying, and Generel Tester',
+    bio: 'A final-year Cyber Security undergraduate at SLIIT, focused on privacy-preserving cryptographic techniques. Contributed to the Praja Vote project by implementing secure vote tallying using Multi-Party Computation (MPC) and integrating the backend logic for threshold-based secret reconstruction.',
+    imageUrl: `${BASE_URL}images/mushtaq.jpg`,
     socialLinks: {
-      github: '#',
       linkedin: '#',
       email: 'mailto:researcher4@example.com'
     }

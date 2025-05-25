@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "type": "module",
   "homepage": "https://mushtaq012.github.io/praja-vote",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -16,6 +15,7 @@
   "dependencies": {
     "framer-motion": "^11.1.4",
     "jspdf": "^2.5.1",
+    "jsx-runtime": "^1.2.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
