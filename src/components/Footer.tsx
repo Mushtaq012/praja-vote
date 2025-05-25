@@ -25,12 +25,12 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="praja-vote/" className="hover:text-orange-300 transition-colors duration-300">
+                <Link to="/" className="hover:text-orange-300 transition-colors duration-300">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="praja-vote/documents" className="hover:text-orange-300 transition-colors duration-300">
+                <Link to="/documents" className="hover:text-orange-300 transition-colors duration-300">
                   Documents
                 </Link>
               </li>
