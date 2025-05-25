@@ -1,13 +1,17 @@
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const BASE_URL = import.meta.env.BASE_URL;
+const currentYear = new Date().getFullYear();
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="bg-blue-600 text-white pt-12 pb-8">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          {/* About */}
           <div>
             <h3 className="text-xl font-bold mb-4">Praja Vote</h3>
             <p className="mb-4">
@@ -15,28 +19,33 @@ const Footer: React.FC = () => {
               transparency and privacy in the democratic process.
             </p>
           </div>
-          
+
+          {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="hover:text-orange-300 transition-colors duration-300">
+                <Link to="praja-vote/" className="hover:text-orange-300 transition-colors duration-300">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/documents" className="hover:text-orange-300 transition-colors duration-300">
+                <Link to="praja-vote/documents" className="hover:text-orange-300 transition-colors duration-300">
                   Documents
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-orange-300 transition-colors duration-300">
+                <a
+                  href={`${BASE_URL}#contact`}
+                  className="hover:text-orange-300 transition-colors duration-300"
+                >
                   Contact
                 </a>
               </li>
             </ul>
           </div>
-          
+
+          {/* Contact Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
             <ul className="space-y-2">
@@ -55,7 +64,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        
+
+        {/* Footer Bottom */}
         <div className="mt-8 pt-8 border-t border-blue-500 text-center">
           <p>© {currentYear} Praja Vote Research Project. All rights reserved.</p>
         </div>
