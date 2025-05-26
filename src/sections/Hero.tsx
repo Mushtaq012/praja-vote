@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+const BASE_URL = import.meta.env.BASE_URL;
 
 const Hero: React.FC = () => {
   const scrollToAbstract = () => {
@@ -8,9 +9,13 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-orange-50">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      
+    <section
+      className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${BASE_URL}images/Flag.png)` }}
+    >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm z-0"></div>
+
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col items-center text-center">
           <motion.div
@@ -22,7 +27,7 @@ const Hero: React.FC = () => {
               Praja Vote
             </h1>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -32,7 +37,7 @@ const Hero: React.FC = () => {
               A Secure Voting System Based on Zero-Knowledge Proofs
             </h2>
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -42,7 +47,7 @@ const Hero: React.FC = () => {
             Enhancing democratic processes through cryptographic innovations that 
             ensure voter privacy while maintaining election integrity and transparency.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,7 +73,7 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
-      
+
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -79,7 +84,7 @@ const Hero: React.FC = () => {
           <ChevronDown className="text-blue-600" />
         </button>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
