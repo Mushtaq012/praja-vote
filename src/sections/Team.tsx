@@ -20,7 +20,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 'member-1',
-    name: 'Mr. Hussain Rizmy',
+    name: 'Hussain M.R.S',
     role: 'Leader, ZKP integration and Secuirty Tester',
     bio: 'A final-year Cyber Security undergraduate at SLIIT, specializing in Zero-Knowledge Proofs and cryptographic protocols. He contributed to the Praja Vote project by designing a privacy-preserving ZKP-based voting system.',
     imageUrl: `${BASE_URL}images/hussain.jpg`, // 
