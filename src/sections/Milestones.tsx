@@ -51,7 +51,7 @@ const milestones = [
     id: 'milestone-7',
     title: 'Final Presentation & Thesis Submission',
     date: 'May 2025',
-    status: 'upcoming',
+    status: 'completed',
     description: 'Presenting research findings to the academic committee and submitting the final thesis document.'
   }
 ];
